@@ -1,0 +1,18 @@
+<H1>Please login to check your Todo List!!!!</H1>
+
+
+<div class="container">
+    <div class="alert alert-warning"   *ngIf='invalidLogin'>{{errorMessage}}</div>
+<!-- to take data from component value="{{username}}" -->
+
+<!-- to get data from Ui & update in component as well, this can be done by 2-way data binding -->
+
+UserName:<input type="text" name="username" [(ngModel)]="username"><br>
+Password:<input type="password" name="password" [(ngModel)]="password"><br><br>
+
+<!-- Event binding -->
+<button (click)=handleLogin() class="btn btn-success">Login</button>
+
+</div>
+
+

@@ -1,0 +1,21 @@
+<h1>Welcome!</h1>
+<div class="container">
+Welcome {{name}}
+<br>
+
+
+Let's manage our Todo List from <a routerLink="/todos">here</a>
+</div>
+
+<div class="container">
+
+        Click Here to get a customised Welcome message!!!
+    <button (click)=getWelcomeMessageWithParameter() class="btn btn-success">Get Welcome Message</button>
+</div>
+
+<!-- to get some response from a REST resource -->
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your customised Welcome message </h2>
+    {{welcomeMessageFromService}}
+</div>    
